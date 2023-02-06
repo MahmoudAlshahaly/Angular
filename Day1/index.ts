@@ -62,15 +62,8 @@ class Employee implements IEmployee {
 
 }
 class manger extends Employee {
-  public  id: number;
-    name: string;
-    username: string;
-    email: string;
-    address: any;
-
     constructor() {
         super();
-
         this.id=1;
         this.name= "Leanne Graham";
         this.username= "Bret";
