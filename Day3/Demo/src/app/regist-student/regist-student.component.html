@@ -1,0 +1,25 @@
+<div class="bg-light p-5 text-center">
+    <div class="container">
+        <div class="row">
+            <h2 class="bg-dark p-3 text-light rounded my-3"> Register Student</h2>
+            <input [(ngModel)]="Name" type="text" class="form-control my-3" placeholder="Enter Student Name" />
+            <input [(ngModel)]="Age" type="text" class="form-control my-3" placeholder="Enter Student Age" />
+            <button (click)="add()" class="btn btn-primary">Add Student</button>
+            <p class="text-dark fw-bold lead ">{{error}}</p>
+            <table *ngIf="Students.length >0 " style="border: 2px solid;" class="table w-75 m-auto mt-4">
+                <thead>
+                    <th>Student Id</th>
+                    <th>Student Name</th>
+                    <th>Student Age</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let s of Students ;let i=index">
+                        <td>{{i}}</td>
+                        <td>{{s.N}}</td>
+                        <td>{{s.A}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

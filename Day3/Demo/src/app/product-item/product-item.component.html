@@ -1,0 +1,18 @@
+<div id="productShadow" class="alert rounded">
+    <img [src]="product.imgSrc" alt="" />
+    <h3>{{ product.title }}</h3>
+    <div class="innerData">
+      <p>Quantity : {{ quantity() }}</p>
+      <p>Price : {{ product.price }}</p>
+      <button
+        [ngClass]="{
+          'btn-warning': product.quantity != 0,
+          'btn-danger': product.quantity == 0
+        }"
+        class="btn btn-warning"
+      >
+        {{ product.quantity == 0 ? "SOLID OUT" : "BUY NOW" }}
+      </button>
+    </div>
+  </div>
+  

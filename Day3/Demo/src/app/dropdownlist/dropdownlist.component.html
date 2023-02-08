@@ -1,0 +1,14 @@
+<div class="bg-light p-5 text-center">
+    <div class="container">
+        <div class="row">
+            <h2 class="bg-dark p-3 text-light rounded my-3">Drop Down list</h2>
+            <select (change)="getData($event)">
+                <option value="0" >PD Track Available</option>
+                <option value="1">Open Source Track Available</option>
+                <option value="2">Test Track</option>
+                <option value="3">Mearn Track</option>
+            </select>
+            <p class="lead my-3">{{SelectValue}}</p>
+        </div>
+    </div>
+</div>
