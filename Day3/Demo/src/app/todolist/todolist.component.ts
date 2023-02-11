@@ -17,6 +17,9 @@ export class TodolistComponent {
 
   remove(index:number)
   {
-   this.todol = this.todol.filter((item,i)=>{ index !=i});
+    
+   this.todol = this.todol.filter( (item,i) => {
+     return index != i;
+   } );
   }
 }

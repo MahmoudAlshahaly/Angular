@@ -14,8 +14,8 @@
                 <button (click)="add()" class="btn btn-primary d-block w-100">+</button>
             </div>
             <div class="row" *ngFor="let todo of todol ; let i=index">
-                <div class="col-sm-8 mt-4 bg-secondry rounded">
-                    <p class="text-light fw-bold lead ">{{todo}}</p>
+                <div class="col-sm-8 mt-4">
+                    <p class="text-light bg-secondary rounded  lead ">{{todo}}</p>
                 </div>
                 <div class="col-sm-4 mt-4">
                     <button (click)="remove(i)" class="btn btn-danger d-block w-100">-</button>

@@ -1,0 +1,56 @@
+<div class="bg-light  mt-3 mb-5" >
+    <h2 class="text-center p-5 rounded">User form </h2>
+  
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-4"></div>
+
+        <div class="col-4">
+            <form [formGroup]="userForm" (ngSubmit)="login($event)">
+                <div class="mb-5">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email"  [(ngModel)]="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                         formControlName="email">
+                 <ng-container *ngIf="getEmail.touched">
+                  <div *ngIf="getEmail.hasError('required')"  id="emailHelp" class="form-text text-danger" >
+                    Email is required
+                  </div>
+                  <div *ngIf="getEmail.hasError('email')"  id="emailHelp" class="form-text text-danger" >
+                    Email not valid
+                  </div>
+                </ng-container>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                 
+                  <input type="password"   [(ngModel)]="password" class="form-control" id="exampleInputPassword1"
+                  formControlName="password">
+                  <ng-container *ngIf="getpassword.touched">
+                    <div *ngIf="getpassword.hasError('required')"  id="emailHelp" class="form-text text-danger" >
+                      password is required
+                    </div>
+                    <div *ngIf="getpassword.hasError('minlength')"  id="emailHelp" class="form-text text-danger" >
+                      password not valid
+                    </div>
+                  </ng-container>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button class="btn btn-warning mb-5 mx-1" type="submit" (click)="add(email,password)">Add User</button>
+            
+                <button class="btn btn-danger mb-5" type="submit"  (click)="update(email,password)">Update User</button>
+              </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+</div>
+
+
+
+<!-- <button class="btn btn-warning" (click)="backtohome()">Back to home</button> -->
